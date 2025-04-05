@@ -69,12 +69,12 @@ async def whatsapp_webhook(
             to=From
         )
 
+    except Exception as e:
+        print("❌ Error:", str(e))
+        return PlainTextResponse("Something went wrong", status_code=500)
+
 
 @app.get("/", response_class=PlainTextResponse)
 async def root():
     return "✅ WhatsApp Fact-Check Bot is running."
         
-
-    except Exception as e:
-        print("❌ Error:", str(e))
-        return PlainTextResponse("Something went wrong", status_code=500)
