@@ -69,6 +69,10 @@ async def whatsapp_webhook(
             to=From
         )
 
+
+@app.get("/", response_class=PlainTextResponse)
+async def root():
+    return "✅ WhatsApp Fact-Check Bot is running."
         
 
     except Exception as e:
