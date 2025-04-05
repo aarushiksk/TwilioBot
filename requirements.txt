@@ -6,3 +6,4 @@ httpx
 python-dotenv
 python-multipart
 google-generativeai
+twilio
